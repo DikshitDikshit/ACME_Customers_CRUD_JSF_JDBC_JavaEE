@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"com.algonquincollege.cst8277.customers.config"},{"l":"com.algonquincollege.cst8277.customers.dao"},{"l":"com.algonquincollege.cst8277.customers.jsf"},{"l":"com.algonquincollege.cst8277.customers.model"}]

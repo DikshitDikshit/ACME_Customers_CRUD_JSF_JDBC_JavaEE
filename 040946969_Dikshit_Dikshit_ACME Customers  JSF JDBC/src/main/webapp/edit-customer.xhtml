@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:jsf="http://xmlns.jcp.org/jsf"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+
+<h:head>
+	<title>#{uiconsts['updateLabel']}</title>
+	<style>
+table {
+	border: solid 1px #DDEEEE;
+	border-collapse: collapse;
+	border-spacing: 0;
+	table-layout: auto;
+	width: 95%;
+}
+
+table td {
+	border: solid 1px #DDEEEE;
+}
+
+table th {
+	border: solid 1px black;
+	background-color: #d8d8d8;
+}
+
+table tr:nth-child(even) {
+	background: #f2f2f2;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+	background-color: #f0f0e0;
+}
+
+caption {
+	white-space: nowrap;
+	caption-side: bottom;
+}
+</style>
+</h:head>
+<h:body>
+	<br />
+	<h1 id="header_1" class="form-header" data-component="header">#{uiconsts['updateLabel']}</h1>
+	<h:form>
+
+		<div>
+			<h:outputLabel value="#{uiconsts['columnLabel_FirstName']}" />
+			<div>
+				<h:inputText id="firstName" value="#{Customer.firstName}">
+				</h:inputText>
+			</div>
+		</div>
+		<div>
+			<h:outputLabel value="#{uiconsts['columnLabel_LastName']}" />
+			<div>
+				<h:inputText id="lastName" value="#{Customer.lastName}">
+				</h:inputText>
+			</div>
+		</div>
+		<div>
+			<h:outputLabel value="#{uiconsts['columnLabel_Email']}" />
+			<div>
+				<h:inputText id="email" value="#{Customer.email}">
+
+				</h:inputText>
+			</div>
+		</div>
+		<div>
+			<h:outputLabel value="#{uiconsts['columnLabel_PhoneNumber']}" />
+			<div>
+				<h:inputText id="phoneNumber" value="#{Customer.phoneNumber}">
+				</h:inputText>
+			</div>
+		</div>
+
+		<h:commandButton value="#{uiconsts['updateLabel']}"
+			action="#{customerController.submitUpdatedCustomer(Customer)}" />
+
+	</h:form>
+</h:body>
+</html>
